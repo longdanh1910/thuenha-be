@@ -1,7 +1,8 @@
 package com.hiringhome.entity.enums;
 
 public enum NotificationType {
-    BOOKING,
-    BOOKING_CANCELLATION,
-    REVIEW
+    NEW_BOOKING,
+    BOOKING_STATUS_UPDATED,
+    NEW_REVIEW,
+    REVIEW_RESPONSE
 }

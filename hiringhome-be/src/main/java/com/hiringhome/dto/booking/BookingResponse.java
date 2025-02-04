@@ -1,25 +1,27 @@
-//package com.hiringhome.dto.booking;
-//
-//import com.hiringhome.entity.BookingStatus;
-//import lombok.Data;
-//
-//import java.math.BigDecimal;
-//import java.time.LocalDateTime;
-//
-//@Data
-//public class BookingResponse {
-//    private Long id;
-//    private Long propertyId;
-//    private String propertyTitle;
-//    private String propertyAddress;
-//    private String tenantName;
-//    private Long tenantId;
-//    private LocalDateTime checkInDate;
-//    private LocalDateTime checkOutDate;
-//    private BigDecimal totalPrice;
-//    private BookingStatus status;
-//    private LocalDateTime checkedInAt;
-//    private LocalDateTime checkedOutAt;
-//    private LocalDateTime cancelledAt;
-//    private String cancellationReason;
-//}
+package com.hiringhome.dto.booking;
+
+import com.hiringhome.entity.enums.BookingStatus;
+import lombok.Builder;
+import lombok.Data;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
+@Data
+@Builder
+public class BookingResponse {
+    private Long id;
+    private Long propertyId;
+    private String propertyTitle;
+    private String propertyImage;
+    private Long tenantId;
+    private String tenantName;
+    private String tenantAvatar;
+    private LocalDate checkInDate;
+    private LocalDate checkOutDate;
+    private Double totalPrice;
+    private Integer guests;
+    private BookingStatus status;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+}
